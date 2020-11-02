@@ -1,17 +1,14 @@
 header{
-    background-color: steelblue;
+    background-color: rgb(151, 126, 127);
 }
 main{
-    background-color: darkgray;
+    background-color: rgb(236, 232, 232);
 }
 nav{
-    background-color: teal;
-}
-aside{
-    background-color: forestgreen;
+    background-color: rgb(192, 192, 192);
 }
 footer{
-    background-color: pink;
+    background-color: rgb(223, 188, 184);
 }
 .small-grid{
     display: grid;
@@ -22,7 +19,7 @@ footer{
 .big-grid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
     gap: 10px;
     height: 100vh;
     padding: 5px;
