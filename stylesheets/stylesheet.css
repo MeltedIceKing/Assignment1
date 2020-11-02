@@ -1,8 +1,9 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 header{
     background-color: rgb(151, 126, 127);
     text-align: center;
-    font-family: sans-serif;
-    font-weight: 100;
 }
 main{
     background-color: rgb(236, 232, 232);
@@ -14,25 +15,38 @@ footer{
     background-color: rgb(223, 188, 184);
     text-align: center;
 }
+.green-button{
+    background-color: green;
+    border: none;
+    border-radius: 5%;
+    padding: 10px;
+    color: white;
+    margin: 20px;
+    display: inline;
+}
+
+.section3{
+    background-color: white;
+    margin: 5%;
+    width: 90%;   
+    height: 30%;
+    border-radius: 5%;
+    flex-grow: 1;
+}
 .small-grid{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 4fr;
-    gap: 10px;
+    grid-template-columns: 20% 5fr;
+    gap: 15px;
 }
 .big-grid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
-    gap: 10px;
+    grid-template-rows: 1fr 5fr 1fr;
+    gap: 15px;
     height: 100vh;
-    padding: 5px;
 }
-.list-class{
-    list-style-type: none;
-    text-align: center;
-}
-.list-class > li{
-    display: inline;
-    padding: 5px;
+.smallest-flex{
+    display: flex;
+    flex-direction: column;
 }
