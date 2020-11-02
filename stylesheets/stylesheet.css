@@ -1,5 +1,6 @@
 header{
     background-color: rgb(151, 126, 127);
+    text-align: center;
 }
 main{
     background-color: rgb(236, 232, 232);
@@ -9,6 +10,9 @@ nav{
 }
 footer{
     background-color: rgb(223, 188, 184);
+}
+footer > h2{
+    text-align: center;
 }
 .small-grid{
     display: grid;
