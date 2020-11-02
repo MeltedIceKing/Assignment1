@@ -16,15 +16,33 @@ footer{
     text-align: center;
 }
 .green-button{
-    background-color: green;
+    background-color: rgb(93, 153, 124);
     border: none;
-    border-radius: 5%;
-    padding: 10px;
+    border-radius: 15%;
+    padding: 15px;
     color: white;
     margin: 20px;
     display: inline;
 }
-
+.black-button{
+    background-color: rgb(105, 105, 105);
+    border: none;
+    border-radius: 15%;
+    padding: 15px;
+    color: white;
+    margin: 20px;
+    display: inline;
+}
+.section1{
+    flex-basis: 100px;
+    flex-grow: 20;
+    flex-shrink: 1;
+}
+.section2{
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
 .section3{
     background-color: white;
     margin: 5%;
@@ -46,7 +64,10 @@ footer{
     gap: 15px;
     height: 100vh;
 }
-.smallest-flex{
+.small-flex{
     display: flex;
     flex-direction: column;
+}
+.smaller-flex{
+    display: flex;
 }
