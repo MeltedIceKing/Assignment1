@@ -16,6 +16,15 @@ footer{
     background-color: rgb(223, 188, 184);
     text-align: center;
 }
+.textbox{
+    border: none;
+    border-radius: 5%;
+    width: 85%;
+    height: 33vh;
+    position: relative;
+    text-indent: 5%;
+    padding: 5px;
+}
 .green-button{
     background-color: rgb(93, 153, 124);
     border: none;
@@ -53,16 +62,9 @@ footer{
     flex-shrink: 1;
 }
 .section3{
-    background-color: white;
-    font-family: monospace;
-    margin-left: 10%;
-    margin-top: 2%;
-    width: 80%;
-    height: 50%;
-    border-radius: 5%;
     flex-grow: 1;
+    text-align: center;
     flex-basis: 200px;
-    text-indent: 2%;
 }
 .section4{
     margin-top: 2%;
@@ -80,7 +82,8 @@ footer{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 5fr 1fr;
     gap: 15px;
-    height: 97vh;
+    height: 100vh;
+    width: 100vw;
 }
 .small-flex{
     display: flex;
