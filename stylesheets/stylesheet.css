@@ -10,6 +10,7 @@ main{
 }
 nav{
     background-color: rgb(192, 192, 192);
+    text-indent: 2%;
 }
 footer{
     background-color: rgb(223, 188, 184);
@@ -19,23 +20,31 @@ footer{
     background-color: rgb(93, 153, 124);
     border: none;
     border-radius: 15%;
-    padding: 15px;
+    padding: 20px;
     color: white;
-    margin: 20px;
+    margin: 25px;
     display: inline;
 }
 .black-button{
     background-color: rgb(105, 105, 105);
     border: none;
     border-radius: 15%;
-    padding: 15px;
+    padding: 20px;
     color: white;
-    margin: 20px;
+    margin: 25px;
+    display: inline;
+}
+.red-button{
+    background-color: rgb(212, 59, 21);
+    border: none;
+    border-radius: 15%;
+    padding: 20px;
+    color: white;
     display: inline;
 }
 .section1{
     flex-basis: 100px;
-    flex-grow: 20;
+    flex-grow: 13;
     flex-shrink: 1;
 }
 .section2{
@@ -45,16 +54,25 @@ footer{
 }
 .section3{
     background-color: white;
-    margin: 5%;
-    width: 90%;   
-    height: 30%;
+    font-family: monospace;
+    margin-left: 10%;
+    margin-top: 2%;
+    width: 80%;
+    height: 50%;
     border-radius: 5%;
     flex-grow: 1;
+    flex-basis: 200px;
+    text-indent: 2%;
+}
+.section4{
+    margin-top: 2%;
+    flex-grow: 1;
+    text-align: center;
 }
 .small-grid{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 20% 5fr;
+    grid-template-columns: 20% 1fr;
     gap: 15px;
 }
 .big-grid{
@@ -62,7 +80,7 @@ footer{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 5fr 1fr;
     gap: 15px;
-    height: 100vh;
+    height: 97vh;
 }
 .small-flex{
     display: flex;
@@ -70,4 +88,5 @@ footer{
 }
 .smaller-flex{
     display: flex;
+    flex-grow: 1;
 }
