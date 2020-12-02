@@ -42,6 +42,7 @@ footer{
     color: white;
     margin: 25px;
     display: inline;
+    float: right;
 }
 .red-button{
     background-color: rgb(212, 59, 21);
@@ -54,11 +55,6 @@ footer{
 .section1{
     flex-basis: 100px;
     flex-grow: 13;
-    flex-shrink: 1;
-}
-.section2{
-    flex-basis: 100px;
-    flex-grow: 1;
     flex-shrink: 1;
 }
 .section3{
