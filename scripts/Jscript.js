@@ -1,11 +1,14 @@
 const darkButton = document.querySelector('.black-button');
+const redButton = document.querySelector('.red-button');
+const topGreenButton = document.querySelector('.section1 > green-button');
+const botGreenButton = document.querySelector('section4 > green-button');
 
 let darkTheme = () => {
     if (darkButton.innerHTML == 'Dark Theme') {
         document.querySelector('.big-grid').style.backgroundColor = 'rgb(200, 200, 200)'
         document.querySelector('.top-head').style.backgroundColor = 'rgb(100, 82, 82)'
         document.querySelector('.top-head').style.color = 'rgb(225, 225, 225)'
-        document.querySelector('.small-flex').style.backgroundColor = 'rgb(184, 169, 169)'
+        document.querySelector('main').style.backgroundColor = 'rgb(184, 169, 169)'
         document.querySelector('.textbox').style.backgroundColor = 'rgb(70, 70, 70)'
         document.querySelector('.textbox').style.color = 'rgb(225, 225, 225)'
         document.querySelector('.nav-class').style.backgroundColor = 'rgb(110, 110, 110)'
@@ -23,7 +26,7 @@ let darkTheme = () => {
         document.querySelector('.big-grid').style.backgroundColor = 'white'
         document.querySelector('.top-head').style.backgroundColor = 'rgb(151, 126, 127)'
         document.querySelector('.top-head').style.color = 'black'
-        document.querySelector('.small-flex').style.backgroundColor = 'rgb(236, 232, 232)'
+        document.querySelector('main').style.backgroundColor = 'rgb(236, 232, 232)'
         document.querySelector('.textbox').style.backgroundColor = 'white'
         document.querySelector('.textbox').style.color = 'black'
         document.querySelector('.nav-class').style.backgroundColor = 'rgb(192, 192, 192)'
@@ -38,14 +41,13 @@ let darkTheme = () => {
         document.querySelector('footer').style.color = 'black'
         document.querySelector('body').style.backgroundColor = 'white'
     }
-}
+};
+
+let clearText = () => {
+    document.querySelector('.textbox').style.display = 'none'
+    document.querySelector('.red-button').style.display = 'none'
+    document.querySelector('.section4 > .green-button').style.display = 'none'
+};
 
 darkButton.addEventListener('click', darkTheme)
-
-//     if (darkButton.innerHTML == 'Dark Theme'){
-        
-//     }else {
-//         document.removeEventListener('click');
-//     }
-//     console.log('The heading was clicked!');
-// });
+redButton.addEventListener('click', clearText)
