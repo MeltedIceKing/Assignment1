@@ -59,6 +59,17 @@ let makeNewNote = () => {
     }
 }
 
+var notesArray = [
+    {
+        title:  "note one",
+        body:   "some text 1",
+    },
+    {
+        title:  "note two",
+        body:   "some text 2",
+    },
+];
+
 darkButton.addEventListener('click', darkTheme);
 redButton.addEventListener('click', clearText);
 topGreenButton.addEventListener('click', makeNewNote);
