@@ -73,29 +73,26 @@ let makeNewNote = () => {
 };
 
 var saveText = (notesArray) => {
-    let textValue = document.querySelector('.textbox').value
-
+    let textValue = document.querySelector('.textbox').value;
     if (textValue == ''){
-        textValue = 'This is a placeholder'
+        textValue = 'This is a placeholder';
     }else if (textValue == notesArray[1].title || textValue == notesArray[0].title) {
-        textValue = 'This is a placeholder'
+        textValue = 'This is a placeholder';
     }else {
-        let textArray = textValue.split(' ')
+        let textArray = textValue.split(' ');
         notesArray.push(
             {
                 title:  textArray[0],
                 body:   textValue,
             }
-        )
+        );
     }
     return notesArray;
 };
 
 var showText = (notesArray) => {
-    noteToAdd = saveText(notesArray)
+    noteToAdd = saveText(notesArray);
     if (noteToAdd.length > 2){
-        console.log(notesArray);
-        console.log(noteToAdd[noteToAdd.length - 1]);
         var newListItem = document.createElement("li");
         newListItem.classList.add('list-item');
         newListItem.append(noteToAdd[noteToAdd.length - 1].title);
@@ -113,11 +110,10 @@ botGreenButton.addEventListener('click', function (){
 
 var notesItemList = document.querySelector('#notes-list');
 notesItemList.addEventListener('click', (e) => {
-    var itemToBeUsed = e.target.innerHTML
+    var itemToBeUsed = e.target.innerHTML;
     for (var i = 0; i < notesArray.length; i++){
         if (notesArray[i].title == itemToBeUsed){
-            // document.querySelector('text-box').value = notesArray[i].body
-            document.querySelector('.textbox').value = notesArray[i].body
+            document.querySelector('.textbox').value = notesArray[i].body;
         }
     }
 }
