@@ -73,21 +73,22 @@ let makeNewNote = () => {
 };
 
 var saveText = (notesArray) => {
-    let textValue = document.querySelector('.textbox').value;
+    var textValue = document.querySelector('.textbox').value;
+    var textinnerValue = document.querySelector('.textbox').innerHTML;
     if (textValue == ''){
-        textValue = 'This is a placeholder';
+        document.querySelector('.textbox').value = '';
     }else if (textValue == notesArray[1].title || textValue == notesArray[0].title) {
-        textValue = 'This is a placeholder';
+        document.querySelector('.textbox').value = '';
     }else {
-        let textArray = textValue.split(' ');
+        let textArray = textValue.split('\n');
         notesArray.push(
             {
                 title:  textArray[0],
                 body:   textValue,
             }
         );
+        return notesArray;
     }
-    return notesArray;
 };
 
 var showText = (notesArray) => {
@@ -116,5 +117,4 @@ notesItemList.addEventListener('click', (e) => {
             document.querySelector('.textbox').value = notesArray[i].body;
         }
     }
-}
-);
+});
