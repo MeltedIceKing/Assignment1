@@ -1,7 +1,20 @@
 const darkButton = document.querySelector('.black-button');
 const redButton = document.querySelector('.red-button');
+const botGreenButton = document.querySelector('.bot-green');
 const topGreenButton = document.querySelector('.section1 > .green-button');
-const botGreenButton = document.querySelector('section4 > .green-button');
+var notesListFirst = document.querySelector('.first-note').innerHTML;
+var notesListSecond = document.querySelector('.second-note').innerHTML;
+
+var notesArray = [
+    {
+        title:  "note one",
+        body:   "some text 1",
+    },
+    {
+        title:  "note two",
+        body:   "some text 2",
+    },
+];
 
 let darkTheme = () => {
     if (darkButton.innerHTML == 'Dark Theme') {
@@ -55,21 +68,57 @@ let makeNewNote = () => {
         document.querySelector('.red-button').style.visibility = 'visible';
         document.querySelector('.section4 > .green-button').style.visibility = 'visible';
     }else{
-        document.querySelector('.textbox').value = 'This is a placeholder';
+        document.querySelector('.textbox').value = '';
     }
-}
+};
 
-var notesArray = [
-    {
-        title:  "note one",
-        body:   "some text 1",
-    },
-    {
-        title:  "note two",
-        body:   "some text 2",
-    },
-];
+var saveText = (notesArray) => {
+    let textValue = document.querySelector('.textbox').value
+
+    if (textValue == ''){
+        textValue = 'This is a placeholder'
+    }else if (textValue == notesArray[1].title || textValue == notesArray[0].title) {
+        textValue = 'This is a placeholder'
+    }else {
+        let textArray = textValue.split(' ')
+        notesArray.push(
+            {
+                title:  textArray[0],
+                body:   textValue,
+            }
+        )
+    }
+    return notesArray;
+};
+
+var showText = (notesArray) => {
+    noteToAdd = saveText(notesArray)
+    if (noteToAdd.length > 2){
+        console.log(notesArray);
+        console.log(noteToAdd[noteToAdd.length - 1]);
+        var newListItem = document.createElement("li");
+        newListItem.classList.add('list-item');
+        newListItem.append(noteToAdd[noteToAdd.length - 1].title);
+        var navList = document.getElementById("notes-list");
+        navList.appendChild(newListItem);
+    }
+};
 
 darkButton.addEventListener('click', darkTheme);
 redButton.addEventListener('click', clearText);
 topGreenButton.addEventListener('click', makeNewNote);
+botGreenButton.addEventListener('click', function (){
+    showText(notesArray);
+});
+
+var notesItemList = document.querySelector('#notes-list');
+notesItemList.addEventListener('click', (e) => {
+    var itemToBeUsed = e.target.innerHTML
+    for (var i = 0; i < notesArray.length; i++){
+        if (notesArray[i].title == itemToBeUsed){
+            // document.querySelector('text-box').value = notesArray[i].body
+            document.querySelector('.textbox').value = notesArray[i].body
+        }
+    }
+}
+);
