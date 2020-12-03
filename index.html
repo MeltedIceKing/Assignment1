@@ -2,45 +2,39 @@
 <html lang="en">
 	<head>
         <link rel="stylesheet" href="stylesheets/stylesheet.css">
-		<title> Assignment 1 </title>
+		<title> Assignment 2 </title>
 	</head>
 	<body>
-
         <div class="big-grid">
-            <header>
-                <h1>Take Better Notes</h1>
-            </header>
-
+            <section class="top-head">
+                    <h1>Take Better Notes</h1>
+            </section>
             <div class="small-grid">
-                <nav>
+                <nav class="nav-class">
                     <h2>My Notes</h2>
-                    <ul>
-                        <li>note one</li>
-                        <li>note two</li>
+                    <ul id="notes-list">
+                        <li class="first-note list-item">note one</li>
+                        <li class="second-note list-item">note two</li>
                     </ul>
                 </nav>
                 <main>
                     <div class="small-flex">
                         <div class="smaller-flex">
                             <section class="section1">
-                                <button class="green-button">New Note</button>
-                            </section>
-                            <section class="section2">
-                                <button class="black-button">Dark Theme</button>
+                                <button class="green-button buttonS">New Note</button>
+                                <button class="black-button buttonS">Dark Theme</button>
                             </section>
                         </div>
                         <section class="section3">
                             <textarea class="textbox">This is a placeholder</textarea>
                         </section>
                         <section class="section4">
-                            <button class="green-button">Save</button>
-                            <button class="red-button">Cancel</button>
+                            <button class="green-button buttonS bot-green">Save</button>
+                            <button class="red-button buttonS">Cancel</button>
                         </section>
                     </div>
-                    
                 </main>
             </div>
-
             <footer>
                 <h2>Keep in Touch</h2>
                     <a href="index.html">
@@ -51,5 +45,6 @@
                     </a>
             </footer>
         </div>
-	</body>
+    </body>
+    <script src="scripts/Jscript.js"></script>
 </html>
